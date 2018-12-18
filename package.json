@@ -1,0 +1,37 @@
+{
+  "name": "wa-client",
+  "version": "1.0.0",
+  "description": "WA Client stack.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "async": "^2.6.0",
+    "ejs": "^2.6.1",
+    "html-pdf": "^2.2.0",
+    "nodemailer": "^4.6.4",
+    "phantomjs-prebuilt": "^2.1.9",
+    "request": "^2.85.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.239.1",
+    "chai": "^4.1.2",
+    "lambda-tester": "^3.4.1",
+    "mocha": "^5.1.1",
+    "sinon": "^5.0.7"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webangeles/WAClient.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webangeles/WAClient/issues"
+  },
+  "homepage": "https://github.com/webangeles/WAClient#readme"
+}

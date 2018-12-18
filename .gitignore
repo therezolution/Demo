@@ -1,0 +1,5 @@
+*.zip
+.vscode
+node_modules
+waclient.template
+package-lock.json

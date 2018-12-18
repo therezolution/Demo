@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> -->
+    <title>WA Client</title>
+    <style>
+        @font-face {
+            font-family: 'Open Sans';
+            src: url("OpenSans-Regular.otf");
+        }
+
+        @font-face {
+            font-family: 'Open Sans';
+            src: url("OpenSans-Bold.otf");
+            font-weight: 600;
+        }
+
+        @font-face {
+            font-family: 'Open Sans';
+            src: url("OpenSans-Italic.otf");
+            font-style: italic;
+        }
+
+        html {
+            width: 620px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        body {
+            margin: 0px;
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.6;
+            letter-spacing: 0.3px;
+            font-size: 8px;
+        }
+
+        .content {
+            margin: 24px 54px 24px 18px;
+            page-break-after: always;
+        }
+
+        .main-header {
+            width: 100%;
+        }
+
+        .main-line {
+            height: 2px;
+            width: 100%;
+            background-color: #000;
+            margin-top: 8px;
+            margin-bottom: 24px;
+        }
+
+        .primary-details {
+            font-size: 10px;
+            font-weight: 600;
+        }
+
+        .main-details-wrapper {
+            width: 94%;
+            position: relative;
+            display: inline-block;
+        }
+
+        .wh-location {
+            position: relative;
+            float: left;
+        }
+
+        .page-count {
+            position: relative;
+            float: right;
+        }
+
+        .cs-logo {
+            height: 24px;
+            width: 24px;
+            margin: 3px;
+            display: inline-block;
+        }
+
+        .cs-logo>img {
+            padding-top: 4px;
+            padding-bottom: 3px;
+            vertical-align: middle;
+        }
+
+        img {
+            display: inline-block;
+        }
+
+        .section-icon,
+        .section-title {
+            display: inline-block;
+        }
+
+        .section-icon>img {
+            height: 16px;
+            margin-right: 8px;
+        }
+
+        .section-header {
+            margin-top: 24px;
+            text-transform: uppercase;
+            height: 16px;
+        }
+
+        .section-title {
+            font-size: 8px;
+            font-weight: 600;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: 0.2px;
+        }
+
+        /*indecisive about placing these in their respective css sections*/
+        .section-title-spacer-page-1 {
+            height: 2.4px;
+            white-space: pre;
+        }
+
+        .section-title-spacer-page-2 {
+            height: 2px;
+            white-space: pre;
+        }
+
+        .section-line {
+            height: 1px;
+            width: 100%;
+            background-color: #000;
+            margin: 8px 0;
+        }
+
+        .section-content p {
+            white-space: pre;
+        }
+
+        .text-right {
+            text-align: right !important;
+        }
+
+        /*@@@  PAGE 1  @@@*/
+
+        .details-row {
+            width: 100%;
+            margin-bottom: 4px;
+        }
+
+        /* */
+
+        .filler {
+            width: 28.5%;
+            display: inline-block;
+        }
+
+        .details-header {
+            width: 5%;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .details {
+            width: 50%;
+            display: inline-block;
+        }
+
+        .date {
+            width: 10%;
+            display: inline-block;
+        }
+
+        /* */
+
+        .project-description {
+            width: 100%;
+            letter-spacing: 0.2px;
+        }
+
+        ul {
+            list-style-type: disc;
+        }
+
+        .section-row {
+            width: 100%;
+            margin-bottom: 4px;
+        }
+
+        .section-row>div {
+            display: inline-block;
+        }
+
+        .material-desc {
+            width: 60%;
+        }
+
+        .material-uom {
+            width: 19%;
+        }
+
+        .material-qty {
+            width: 19%;
+        }
+
+        .material-header {
+            font-weight: 600;
+        }
+
+        /*@@@  PAGE 2  @@@*/
+
+        .rate-headers {
+            width: 100%;
+            font-weight: 600;
+            padding-bottom: 10px;
+        }
+
+        .rate-headers>div {
+            display: inline-block;
+        }
+
+
+
+        .rate-section {
+            margin-bottom: 24px;
+        }
+
+        .rate-details {
+            width: 100%;
+            margin-bottom: 4px;
+        }
+
+        .rate-details>div {
+            height: inherit;
+            display: inline-block;
+            height: 10px;
+        }
+
+        .underLined,
+        .rate-details>.underLined {
+            border-bottom: 1px solid #ccc;
+            line-height: 10px;
+            height: 10px;
+        }
+
+        .rate-details>.rate-details-desc-with-data,
+        .rate-details>.rate-details-desc {
+            width: 35%;
+            font-size: 8px;
+            height: 10px;
+        }
+
+        .rate-details>.formInfo {
+            width: 10%;
+            height: 10px;
+            font-size: 8px;
+        }
+
+
+
+        .formText,
+        .formTextSmall {
+            font-size: 6px;
+            text-align: center;
+        }
+
+        .formText {
+            width: 5%;
+        }
+
+        .formTextSmall {
+            width: 2.5%;
+        }
+
+        .numbers {
+            text-align: right;
+        }
+
+        .total-indent {
+            width: 85.40%;
+            font-weight: 600;
+            text-align: right;
+        }
+
+
+        .final-details {
+            width: 100%;
+            margin-bottom: 27px;
+        }
+
+        .final-details>div {
+            display: inline-block;
+        }
+
+        .final-exp-label {
+            font-weight: 600;
+        }
+
+        .final-exp-date {
+            width: 71px;
+        }
+
+        .final-total-label {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        .acknowledgement {
+            width: 100%;
+            font-style: italic;
+            margin-bottom: 42px;
+        }
+
+        .signature-section {
+            width: 100%;
+        }
+
+        .signature-section>div {
+            display: inline-block;
+        }
+
+        .signature {
+            width: 35%;
+            border-top: 1px solid #ccc;
+        }
+
+        .signature-indent {
+            width: 45%;
+        }
+
+        .signature-date {
+            width: 18%;
+            text-align: right;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="main-header">
+            <div class="cs-logo">
+                <img src="cs-logo-filled.svg" alt="cs">
+            </div>
+            <div class="main-details-wrapper">
+                <div class="primary-details">
+                    WebAngeles Project
+                    <%= projectId %>
+                    <span id="spec-proj-id"></span> &#183; Warehouse Quote
+                </div>
+                <div>
+                    <div class="wh-location">
+                        <%= whLocation %>
+                    </div>
+                    <div class="page-count">Page 1 of 2</div>
+                </div>
+            </div>
+        </div>
+        <div class="main-line"></div>
+        <!-- need 24px margin below hr-->
+        <div class="section-header">
+            <div class="section-icon">
+                <img src="waclient.svg" alt="cs-logo">
+            </div>
+            <div class="section-title">
+                Project Details
+                <div class="section-title-spacer-page-1"> </div>
+            </div>
+        </div>
+        <div class='section-line'></div>
+        <div class="section-content">
+            <div class="details-row">
+                <div class="details-header">Client</div>
+                <div class="details">
+                    <%= custName %>
+                </div>
+                <div class="filler"></div>
+                <div class="details-header">Start</div>
+                <div class="date text-right">
+                    <%= startDate %>
+                </div>
+            </div>
+            <div class="details-row">
+                <div class="details-header">Type</div>
+                <div class="details">
+                    <%= projectType %>
+                </div>
+                <div class="filler"></div>
+                <div class="details-header">
+                    <%= dueOrEnd %>
+                </div>
+                <div class="date text-right">
+                    <%= dueOrEndDate %>
+                </div>
+            </div>
+            <div class="details-row">
+                <div class="details-header">Freq.</div>
+                <div class="details">
+                    <%= timeLineType %>
+                </div>
+            </div>
+        </div>
+        <div class="section-header">
+            <div class="section-icon">
+                <img src="info-circle-icon.svg" alt="info">
+            </div>
+            <div class="section-title">
+                Project Scope
+                <div class="section-title-spacer-page-1"> </div>
+            </div>
+        </div>
+        <div class="section-line"></div>
+        <div class="project-description">
+            <%- projectDescription %>
+        </div>
+        <%- clientMaterialsSectionHTML %>
+    </div>
+    <div class="content">
+        <div class="main-header">
+            <div class="cs-logo">
+                <img src="cs-logo-filled.svg" alt="cs">
+            </div>
+            <div class="main-details-wrapper">
+                <div class="primary-details">
+                    WebAngeles Project
+                    <%= projectId %>
+                    <span id="spec-proj-id"></span> &#183; Warehouse Quote
+                </div>
+                <div>
+                    <div class="wh-location">
+                        <%= whLocation %>
+                    </div>
+                    <div class="page-count">Page 2 of 2</div>
+                </div>
+            </div>
+        </div>
+        <div class="main-line"></div>
+        <div class="section-header">
+            <div class="section-icon">
+                <img src="money-icon.svg" alt="$">
+            </div>
+            <div class="section-title">
+                Material Rates
+                <div class="section-title-spacer-page-2"> </div>
+            </div>
+        </div>
+        <div class="section-line" style="height: 1px;"></div>
+        <div class="rate-section">
+            <div class="rate-headers rate-details">
+                <div class="rate-details-desc-with-data ">Description</div>
+                <div class="formText "></div>
+                <div class="formInfo numbers">Rate</div>
+                <div class="formText"></div>
+                <div class="formInfo ">UOM</div>
+                <div class="formText"></div>
+                <div class="formInfo numbers">QTY</div>
+                <div class="formTextSmall"></div>
+                <div class="formTextSmall"></div>
+                <div class="formInfo numbers">Cost</div>
+            </div>
+            <% for(var i=0; i<4; i++) {%>
+            <div class="rate-details">
+                <%- whMaterialRatesDesc[i] %>
+                <div class="formText text-right">$</div>
+                <div class="formInfo underLined">&nbsp;</div>
+                <div class="formText">per</div>
+                <%- whMaterialRatesUOM[i] %>
+                <div class="formText">x</div>
+                <%- whMaterialRatesQty[i] %>
+                <div class="formTextSmall">=</div>
+                <div class="formTextSmall text-right">$</div>
+                <div class="formInfo underLined">&nbsp;</div>
+            </div>
+            <% } %>
+            <div class="rate-details">
+                <div class="total-indent"></div>
+                <div class="formTextSmall text-right">$</div>
+                <div class="formInfo underLined">&nbsp;</div>
+            </div>
+        </div>
+        <div class="section-header">
+            <div class="section-icon">
+                <img src="money-icon.svg" alt="$">
+            </div>
+            <div class="section-title">
+                General Rates
+                <div class="section-title-spacer-page-2"> </div>
+            </div>
+        </div>
+        <div class="section-line"></div>
+        <div class="rate-section">
+            <div class="rate-headers rate-details">
+                <div class="rate-details-desc-with-data ">Description</div>
+                <div class="formText "></div>
+                <div class="formInfo numbers">Rate</div>
+                <div class="formText"></div>
+                <div class="formInfo ">UOM</div>
+                <div class="formText"></div>
+                <div class="formInfo numbers">QTY</div>
+                <div class="formTextSmall"></div>
+                <div class="formTextSmall"></div>
+                <div class="formInfo numbers">Cost</div>
+            </div>
+            <% for(var i=0; i<4; i++) {%>
+            <div class="rate-details">
+                <div class="rate-details-desc underLined">&nbsp;</div>
+                <div class="formText text-right">$</div>
+                <div class="formInfo underLined">&nbsp;</div>
+                <div class="formText">per</div>
+                <div class="formInfo underLined">&nbsp;</div>
+                <div class="formText">x</div>
+                <div class="formInfo underLined">&nbsp;</div>
+                <div class="formTextSmall">=</div>
+                <div class="formTextSmall text-right">$</div>
+                <div class="formInfo underLined">&nbsp;</div>
+            </div>
+            <% } %>
+            <div class="rate-details">
+                <div class="total-indent"></div>
+                <div class="formTextSmall text-right">$</div>
+                <div class="formInfo underLined">&nbsp;</div>
+            </div>
+        </div>
+        <div class="section-header">
+            <div class="section-icon">
+                <img src="money-icon.svg" alt="$">
+            </div>
+            <div class="section-title">
+                Labor Rates
+                <div class="section-title-spacer-page-2"> </div>
+            </div>
+        </div>
+        <div class="section-line"></div>
+        <div class="rate-section">
+            <div class="rate-headers rate-details">
+                <div class="rate-details-desc-with-data ">Description</div>
+                <div class="formText "></div>
+                <div class="formInfo numbers">Rate</div>
+                <div class="formText"></div>
+                <div class="formInfo ">UOM</div>
+                <div class="formText"></div>
+                <div class="formInfo numbers">QTY</div>
+                <div class="formTextSmall"></div>
+                <div class="formTextSmall"></div>
+                <div class="formInfo numbers">Cost</div>
+            </div>
+            <% for(var i=0; i<4; i++) {%>
+            <div class="rate-details">
+                <div class="rate-details-desc underLined">&nbsp;</div>
+                <div class="formText text-right">$</div>
+                <div class="formInfo underLined">&nbsp;</div>
+                <div class="formText">per</div>
+                <div class="formInfo">hour</div>
+                <div class="formText">x</div>
+                <div class="formInfo underLined">&nbsp;</div>
+                <div class="formTextSmall">=</div>
+                <div class="formTextSmall text-right">$</div>
+                <div class="formInfo underLined">&nbsp;</div>
+            </div>
+            <% } %>
+            <div class="rate-details">
+                <div class="total-indent"></div>
+                <div class="formTextSmall text-right">$</div>
+                <div class="formInfo underLined">&nbsp;</div>
+            </div>
+        </div>
+        <div class="rate-details final-details">
+            <div class="final-exp-label" style="width:18%">Quote expires on</div>
+            <div class="formInfo underLined" style="width:17%">&nbsp;</div>
+            <div class="final-total-label" style="width: 46.65%;">Project Total </div>
+            <div class="formTextSmall"></div>
+            <div class="formTextSmall text-right">$</div>
+            <div class="formInfo underLined">&nbsp;</div>
+        </div>
+        <div class="acknowledgement">
+            No additional Warehouse fees will apply. Any changes to the project quote must be approved by WAClient in
+            writing. If WAClient does not approve additional project costs in writing, additional Warehouse fees will
+            not be applicable. Please sign below to acknowledge and confirm.
+        </div>
+        <div class="signature-section">
+            <div class="signature">Approval signature</div>
+            <div class="signature-indent"></div>
+            <div class="signature-date">Date</div>
+        </div>
+    </div>
+</body>
+
+</html>
